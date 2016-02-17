@@ -14,14 +14,59 @@ DOM.joined = $.when(
         '/css/al/photoview.css'
     ]),
 
+    // --- API ---------------------------------------------------------------------------------------------------------
+
+    LNK.apply([
+        'api/date/date.js',
+        'api/date/time.js'
+    ]),
+
+    LNK.apply([
+        'api/html/code.js',
+        'api/html/html.js',
+        'api/html/query/lQuery.js',
+        'api/html/query/sQuery.js',
+        'api/html/query/XHR.js'
+    ]),
+
+    LNK.apply([
+        './api/link/vk.api.actions.js',
+        './api/link/vk.api.events.js',
+        './api/link/vk.api.links.js',
+        './api/link/vk.api.media.js',
+        './api/link/vk.api.role.js'
+    ]),
+
+    LNK.apply([
+        './api/dom/vk.api.dom.js',
+        './api/dom/vk.api.events.js',
+        './api/dom/vk.api.position.js',
+        './api/dom/vk.api.sibling.js'
+    ]),
+
+    LNK.apply([
+        './api/card/vk.card.js',
+        './api/card/vk.context.js',
+        './api/card/vk.editable.js',
+        './api/card/vk.mark.js'
+    ]),
+
+
+    LNK.apply([
+        './const/vk.const.js',
+        './const/vk.word.js',
+        './const/vk.word.dia.js',
+        './const/vk.word.greek.js'
+    ]),
+
     (function tryPilot(trial) {
         return (trial = $.Deferred()) && LNK.tryPilot([
-                './pilot/css/vk.zodiak.css',
-                './pilot/vk.phrase.js',
-                './pilot/vk.zodiak.js',
-                './pilot/vk.zodiake.js',
-                './pilot/vk.zodiakw.js'
-            ]).then(function() {
+                'pilot/css/vk.zodiak.css',
+                'pilot/vk.phrase.js',
+                'pilot/vk.zodiak.js',
+                'pilot/vk.zodiake.js',
+                'pilot/vk.zodiakw.js'
+            ]).then(function () {
                 EastZodiak.inherits(Zodiak);
                 WestZodiak.inherits(Zodiak);
             }).always(trial.resolve) && trial;
@@ -30,9 +75,9 @@ DOM.joined = $.when(
     // --- CSS ---------------------------------------------------------------------------------------------------------
 
     LNK.apply([
-        './dom/css/vk.common.css',
-        './dom/css/vk.effects.css',
-        './dom/css/vk.scroll.css'
+        './dom/css/common.css',
+        './dom/css/effects.css',
+        './dom/css/scroll.css'
     ]),
 
     LNK.apply([
@@ -76,49 +121,6 @@ DOM.joined = $.when(
         './vk.init.js'
     ]),
 
-    // --- API ---------------------------------------------------------------------------------------------------------
-
-    LNK.apply([
-        './api/vk.api.date.js',
-        './api/vk.api.node.js',
-        './api/vk.api.str.js',
-        './api/vk.api.time.js',
-        './api/vk.api.xhr.js'
-    ]),
-
-    LNK.apply([
-        './api/link/vk.api.actions.js',
-        './api/link/vk.api.events.js',
-        './api/link/vk.api.links.js',
-        './api/link/vk.api.media.js',
-        './api/link/vk.api.role.js'
-    ]),
-
-    LNK.apply([
-        './api/dom/vk.api.dom.js',
-        './api/dom/vk.api.events.js',
-        './api/dom/vk.api.position.js',
-        './api/dom/vk.api.sibling.js'
-    ]),
-
-    LNK.apply([
-        './api/card/vk.card.js',
-        './api/card/vk.context.js',
-        './api/card/vk.editable.js',
-        './api/card/vk.mark.js'
-    ]),
-
-    LNK.apply([
-        './api/query/vk.lQuery.js',
-        './api/query/vk.sQuery.js'
-    ]),
-
-    LNK.apply([
-        './const/vk.const.js',
-        './const/vk.word.js',
-        './const/vk.word.dia.js',
-        './const/vk.word.greek.js'
-    ]),
 
     // --- DOM ---------------------------------------------------------------------------------------------------------
 
@@ -137,7 +139,7 @@ DOM.joined = $.when(
     }),
 
     LNK.apply([
-        { image : 'vk.imager.js' }[INI.imager],
+        {image : 'vk.imager.js'}[INI.imager],
         'vk.itube.js'
     ], {
         path : './widgets/imager/'
@@ -162,7 +164,7 @@ DOM.joined = $.when(
             './dom/events/vk.listener.js',
             './dom/events/vk.observer.js'
         ])
-    ).then(function() {
+    ).then(function () {
         PortListener.inherits(Listener);
         LiveListener.inherits(Listener);
         FrameListener.inherits(Listener);
@@ -201,14 +203,14 @@ DOM.joined = $.when(
             './loaders/vk.profiler.js',
             './loaders/vk.viewer.js'
         ])
-    ).then(function() {
+    ).then(function () {
         Container.inherits(Loader);
         Hinter.inherits(Loader);
         Marker.inherits(Loader);
         Profiler.inherits(Loader);
         Viewer.inherits(Loader);
     })
-).done(function() { // --- pages ---------------------------------------------------------------------------------------
+).done(function () { // --- pages ---------------------------------------------------------------------------------------
 
     DOM.context('dialog') ? LNK.apply([
         './pages/vk.dialog.js'

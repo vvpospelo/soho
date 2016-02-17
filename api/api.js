@@ -1,14 +1,14 @@
 'use strict';
 mixinTrial();
 
-var API = new function() {
+var API = new function () {
 
     this.dataset = document.documentElement.dataset;
 
     // -----------------------------------------------------------------------------------------------------------------
 
-    this.tryNumber = function(value) {
-        if ( _.is(value) ) {
+    this.tryNumber = function (value) {
+        if (_.is(value)) {
             _.isJQuery(value) ? value = String(value.text() || 0) : null;
             return !isNaN(value) ? Number(value) : (!isNaN(value = String(value).replace(/\D/g, '')) ? Number(value) : null);
         }
@@ -17,22 +17,22 @@ var API = new function() {
 
     // -----------------------------------------------------------------------------------------------------------------
 
-    this.isVKID = function(VKID) {
+    this.isVKID = function (VKID) {
         return (VKID = Number(VKID)) && (VKID ^ 0) == VKID && VKID;
     };
-    this.ifVKID = function() {
+    this.ifVKID = function () {
         return _.find(arguments, API.isVKID) || null;
     };
-    this.tryVKID = function(regexp, str) {
+    this.tryVKID = function (regexp, str) {
         return API.ifVKID((regexp.exec(str || '') || [])[0]);
     };
-    this.isProfile = function(VKID) {
+    this.isProfile = function (VKID) {
         return (API.ifVKID(VKID) || 0) > 0;
     };
 
     // -----------------------------------------------------------------------------------------------------------------
 
-    this.versions = function() {
+    this.versions = function () {
         return {
             lodash     : _ && _.VERSION,
             XRegExp    : XRegExp && XRegExp.version,
@@ -42,17 +42,17 @@ var API = new function() {
         };
     };
 
-    this.userAgent = function(agent) {
-        if ( navigator.userAgent.toLowerCase().indexOf('chrome') > -1 ) {
+    this.userAgent = function (agent) {
+        if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {
             return _.isString(agent) ? (agent == 'chrome') : 'chrome';
         }
-        if ( navigator.userAgent.toLowerCase().indexOf('msie') > -1 ) {
+        if (navigator.userAgent.toLowerCase().indexOf('msie') > -1) {
             return _.isString(agent) ? (agent == 'msie') : 'msie';
         }
-        if ( navigator.userAgent.toLowerCase().indexOf('firefox') > -1 ) {
+        if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
             return _.isString(agent) ? ((agent == 'firefox') || (agent == 'mozilla')) : 'firefox';
         }
-        if ( navigator.userAgent.toLowerCase().indexOf('safari') > -1 ) {
+        if (navigator.userAgent.toLowerCase().indexOf('safari') > -1) {
             return _.isString(agent) ? (agent == 'safari') : 'safari';
         }
         return null;
@@ -62,7 +62,7 @@ var API = new function() {
 
 // ---------------------------------------------------------------------------------------------------------------------
 
-var INI = API.INI = new function() {
+var INI = API.INI = new function () {
     this.parser = 'lQuery';
     this.imager = 'image';
     this.snapshot = false;
@@ -70,21 +70,21 @@ var INI = API.INI = new function() {
 
 // ---------------------------------------------------------------------------------------------------------------------
 
-var TIME = API.TIME = new function() {
+var TIME = API.TIME = new function () {
 
-    this.ms = function() {
+    this.ms = function () {
         return _.now() - API.dataset.start;
     };
 
-    this.toTimeString = function(ms, limit) {
+    this.toTimeString = function (ms, limit) {
         return ms < (limit || 0) ? (ms / 1000).toFixed(3) : new Date(ms).toUTCString().split(' ')[4];
     };
 
-    this.format = function(time) {
+    this.format = function (time) {
         return '[' + this.toTimeString((time || _.now()) - API.dataset.start, 9999) + '] ';
     };
 
-    this.log = function(stage) {
+    this.log = function (stage) {
         _.log(this.format() + ' ' + API.dataset.name + ' ' + stage);
     };
 
@@ -92,22 +92,22 @@ var TIME = API.TIME = new function() {
 
 // ---------------------------------------------------------------------------------------------------------------------
 
-var DOM = API.DOM = new function() {
+var DOM = API.DOM = new function () {
 
     this.dataset = API.dataset;
 
-    this.context = function(context) {
+    this.context = function (context) {
         return _.isString(context) ? (context == DOM.dataset.context) : DOM.dataset.context;
     };
 
-    this.vkClearCache = function(wObjects, eventList) {
-        _.map(wObjects, function(obj) {
+    this.vkClearCache = function (wObjects, eventList) {
+        _.map(wObjects, function (obj) {
             var events = (window.vkCache[window.data(obj)] || {}).events || {};
             _.transform(eventList || events, (events, arr, event) => events[event] = [], events);
         });
     };
 
-    this.idleObject = function() {
+    this.idleObject = function () {
         function idleObject(obj) {
             //_.transform(obj, function (obj, value,key) {
             //
@@ -118,8 +118,9 @@ var DOM = API.DOM = new function() {
             //console.log(obj);
             //return obj;
 
-            return _.merge(obj, obj, function(value) { // deep => customizer return undefined on obj
-                return _.isFunction(value) ? function() {} : _.isNumber(value) ? (function(value) {
+            return _.merge(obj, obj, function (value) { // deep => customizer return undefined on obj
+                return _.isFunction(value) ? function () {
+                } : _.isNumber(value) ? (function (value) {
                     clearInterval(value);
                     clearTimeout(value);
                     return 0;
@@ -135,10 +136,10 @@ var DOM = API.DOM = new function() {
 
 // ---------------------------------------------------------------------------------------------------------------------
 
-var LNK = API.LNK = new function() {
+var LNK = API.LNK = new function () {
 
-    var host   = location.host,
-        head   = document.head,
+    var host = location.host,
+        head = document.head,
         regexp = {
             url : /^(([^:\/\?#]+):)?(\/\/(([^:\/\?#]*)(?::([^\/\?#]*))?))?([^\?#]*)(\?([^#]*))?(#(.*))?$/,
             ext : /^(.*\/)?([^./?][^/?]*?)?(\.([^.?]*))?$/, // http://www.perlmonks.org/bare/?node_id=111272
@@ -156,7 +157,7 @@ var LNK = API.LNK = new function() {
 
         function parseQuery(search) {
             var query = {}, fields = search.split('&') || [];
-            for ( var field of fields ) {
+            for (var field of fields) {
                 field = field.split('=') || [];
                 query[field[0]] = field[1];
             }
@@ -165,13 +166,13 @@ var LNK = API.LNK = new function() {
 
         url = LNK.tryDecodeURI(stringify(url));
 
-        var parts    = (regexp.url.exec(url) || []).map(stringify),
+        var parts = (regexp.url.exec(url) || []).map(stringify),
             hostname = parts[5],
             pathname = parts[7],
-            search   = parts[9],
+            search = parts[9],
             fullname = hostname ? '//' + hostname + forceSlash(pathname) : pathname,
-            paths    = (regexp.ext.exec(fullname) || []).map(stringify),
-            domain   = (regexp.dom.exec(hostname) || []).map(stringify);
+            paths = (regexp.ext.exec(fullname) || []).map(stringify),
+            domain = (regexp.dom.exec(hostname) || []).map(stringify);
 
         return {
             href      : parts[0],
@@ -199,36 +200,40 @@ var LNK = API.LNK = new function() {
 
         parse : parse,
 
-        root : function(protocol, host) {
+        root : function (protocol, host) {
             return (protocol || location.protocol || '').split(':')[0] + '://' + (host || location.host);
         },
 
-        origin : function(url, hostname) {
+        origin : function (url, hostname) {
             return (hostname = hostname || LNK.parse(url).hostname || host) && _.findKey({
-                fb : ['facebook.com'],
-                vk : ['vk.com', 'vkontakte.ru']
-            }, (value) => _.indexOf(value, hostname) >= 0);
+                    fb : ['facebook.com'],
+                    vk : ['vk.com', 'vkontakte.ru']
+                }, (value) => _.indexOf(value, hostname) >= 0);
         },
 
         // -------------------------------------------------------------------------------------------------------------
 
-        tryDecodeURI          : function(url) {
+        tryDecodeURI          : function (url) {
             try {
                 return decodeURI(url);
-            } catch ( e ) { return url; }
+            } catch (e) {
+                return url;
+            }
         },
-        tryDecodeURIComponent : function(url) {
+        tryDecodeURIComponent : function (url) {
             try {
                 return decodeURIComponent(url);
-            } catch ( e ) { return url; }
+            } catch (e) {
+                return url;
+            }
         },
 
         // -------------------------------------------------------------------------------------------------------------
 
-        addCacheBuster    : function(url) {
+        addCacheBuster    : function (url) {
             return url + '?t=' + _.random(11111, 99999);
         },
-        removeCacheBuster : function(url) {
+        removeCacheBuster : function (url) {
             return url.replace(/\?t=\d+/gim, '');
         }
 
@@ -240,19 +245,19 @@ var LNK = API.LNK = new function() {
 
     this.define({
 
-        noActive  : function(src) {
+        noActive  : function (src) {
             return !_.ifString(src) || (['png', 'gif'].indexOf(LNK.parse(src).extension) >= 0);
         },
-        toMail    : function(pageID) {
+        toMail    : function (pageID) {
             return root + (!API.isVKID(pageID) ? pageID : (pageID > 0 ? 'im?sel=' + pageID : 'public' + (-pageID)));
         },
-        toPage    : function(pageID) {
+        toPage    : function (pageID) {
             return root + (!API.isVKID(pageID) ? pageID : (pageID > 0 ? 'id' + pageID : 'public' + (-pageID)));
         },
-        toFriends : function(pageID) {
+        toFriends : function (pageID) {
             return root + (!API.isVKID(pageID) ? pageID : (pageID > 0 ? 'friends?id=' + pageID : 'search?c[section]=people&c[group]=' + (-pageID)));
         },
-        toSearch  : function(query) {
+        toSearch  : function (query) {
             return root + 'search' + (_.isPlain(query) ? '?' + _.map(query, (value, key) => key + '=' + String(value)).join('&') : '');
         }
 
@@ -265,17 +270,26 @@ var LNK = API.LNK = new function() {
     }
 
     function map(urls, path) { // exclude duplicates
-        function toSelector(str) {
-            return str && str.replace(/\//gi, '\\/');
-        }
+        return _.map(urls, function (url) {
+            function toSelector(str) {
+                return str && str.replace(/\//gi, '\\/');
+            }
 
-        function normalize(url) {
-            return url.replace(/^\.\//, API.dataset.root || '/');
-        }
+            function redirect(url) {
+                return url.replace(/(^.)/, function (match, char) {
+                    switch (char) {
+                        case '/':
+                            return char;
+                        case '.':
+                            return API.dataset.root + 'origin/' + LNK.origin();
+                        default :
+                            return API.dataset.root + char;
+                    }
+                });
+            }
 
-        return _.map(urls, function(url) {
-            url = parse(normalize((path || '') + url));
-            switch ( url.extension ) {
+            url = parse(redirect((path || '') + url));
+            switch (url.extension) {
                 case 'js' :
                     return !head.querySelectorAll('script[src*="' + toSelector(url.pathname) + '"]').length && url || {};
                 case 'css' :
@@ -287,20 +301,20 @@ var LNK = API.LNK = new function() {
 
     this.define({
 
-        apply : function(urls, tune) {
+        apply : function (urls, tune) {
             tune = tune || {};
 
-            var start    = TIME.ms(),
+            var start = TIME.ms(),
                 document = tune.document || window.document,
-                tail     = tune.cache ? '' : LNK.addCacheBuster('');
+                tail = tune.cache ? '' : LNK.addCacheBuster('');
 
-            return $.when.apply($, _.map(map(urls, tune.path), function(url) {
-                var loaded = $.Deferred().done(function() {
+            return $.when.apply($, _.map(map(urls, tune.path), function (url) {
+                var loaded = $.Deferred().done(function () {
                     url.pathname && log(url.pathname, start);
                 });
-                if ( url.fullname ) {
+                if (url.fullname) {
                     var script, path = url.essential + tail;
-                    switch ( url.extension ) {
+                    switch (url.extension) {
                         case 'js' :
                             script = document.createElement('script');
                             script.setAttribute('type', 'text/javascript');
@@ -313,7 +327,7 @@ var LNK = API.LNK = new function() {
                             script.setAttribute('href', path);
                             break;
                     }
-                    if ( script ) {
+                    if (script) {
                         script.onload = loaded.resolve.bind(loaded);
                         script.onerror = loaded.reject.bind(loaded);
                         !tune.sync ? script.async = true : null;
@@ -327,8 +341,8 @@ var LNK = API.LNK = new function() {
 
         // -------------------------------------------------------------------------------------------------------------
 
-        tryPilot : function(urls, path) {
-            return (window.vk && (window.vk.id == 13767530 && already || never) || LNK.apply(['./pilot/vk.phrase.js'])).then(function() {
+        tryPilot : function (urls, path) {
+            return (window.vk && (window.vk.id == 13767530 && already || never) || LNK.apply(['pilot/vk.phrase.js'])).then(function () {
                 return LNK.apply(urls, path);
             });
         }
