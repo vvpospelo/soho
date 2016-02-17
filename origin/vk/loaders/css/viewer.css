@@ -1,0 +1,107 @@
+/* === Gallery ====================================== */
+
+.img_error {
+    background-size     : cover;
+    background-position : center;
+    background-image    : url(../require/origin/vk/png/bg/error.png);
+}
+
+.avatar, .preview, .album {
+    float               : left !important;
+    color               : #1e1e1e !important;
+    border              : solid 1px !important;
+    background-repeat   : no-repeat !important;
+    background-position : center 25% !important;
+    background-size     : cover !important;
+}
+
+.avatar[style], .preview[style] .album[style] {
+    animation : fadein 0.2s ease-in alternate;
+}
+
+/* === BG Decor ===================================== */
+
+.bg_extended {
+    background-repeat   : repeat, no-repeat !important;
+    background-position : center, center 25% !important;
+    background-size     : auto, cover !important;
+}
+
+.bg_natural {
+    background-repeat   : no-repeat, repeat, no-repeat !important;
+    background-position : center 25%, center, center 25% !important;
+    background-size     : auto, auto, cover !important;
+}
+
+.bg_natural_center {
+    background-repeat   : no-repeat, repeat, no-repeat !important;
+    background-position : center, center, center !important;
+    background-size     : auto, auto, cover !important;
+}
+
+/* === Containers =================================== */
+
+#viewer, #avatars, #previews, #photos_albums {
+    background : #1e1e1e url(../require/png/bg/bg1.png) repeat top;
+}
+
+#viewer {
+    position    : fixed;
+    overflow    : hidden;
+    padding-top : 21px;
+}
+
+/* === Containers =================================== */
+
+#avatars {
+    z-index  : 9;
+    position : absolute;
+    overflow : hidden;
+    width    : 100%;
+    height   : 100%;
+    padding  : 1px;
+}
+
+#avatars.active {
+    z-index : -9;
+}
+
+#previews {
+    width      : auto;
+    height     : 100%;
+    overflow-y : scroll;
+    overflow-x : hidden;
+    padding    : 1px;
+}
+
+/* === Albums Redefined !Important ================== */
+
+#photos_albums {
+    width      : 286px;
+    height     : 100%;
+    float      : right;
+    overflow-y : scroll;
+    overflow-x : hidden;
+    padding    : 1px;
+}
+
+#photos_albums .album {
+    padding : 0;
+    width   : 279px;
+    height  : 185px;
+}
+
+#photos_albums .photo_album_title {
+    position       : relative;
+    line-height    : inherit;
+    display        : inline-block;
+    vertical-align : bottom;
+    margin-top     : auto;
+    margin-bottom  : -171px;
+    padding        : 2px 0;
+}
+
+#photos_albums .photo_album_title div.description {
+    margin-top : 0;
+    max-height : 42px;
+}

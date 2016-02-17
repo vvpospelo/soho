@@ -1,0 +1,69 @@
+#profiler {
+    display    : none;
+    top        : 21px;
+    z-index    : 9999;
+    border     : solid 2px;
+    position   : absolute;
+    background : #ffffff;
+    animation  : fadein 0.2s ease-in alternate;
+}
+
+#profiler #page_body {
+    padding : 0 !important;
+}
+
+/* =================================================  */
+
+#profiler .profile_info .labeled {
+    max-height : 42px;
+}
+
+#profiler .profile_info .labeled:hover {
+    max-height : 2012px;
+}
+
+#profiler .profile_info .labeled a {
+    padding-right : 3px;
+}
+
+#profiler .profile_info_link,
+#profiler #profile_groups_link,
+#profiler #profile_main_actions,
+#profiler #profile_bottom_actions,
+#profiler #gifts_count_module,
+#profiler #page_actions,
+#profiler #subscribe {
+    display : none !important;
+}
+
+#profiler #profile_info,
+#profiler #profile_full_info {
+    display : inherit !important;
+}
+
+/* =================== Decor =======================  */
+
+.module_body {
+    padding-bottom : 2px !important;
+}
+
+.profile_info .miniblock {
+    padding-top : 0 !important;
+}
+
+.header_top {
+    color       : #fdca00 !important;
+    font-weight : 300 !important;
+    text-shadow : 0 1px 1px #333 !important;
+    background  : url(../require/png/bg/bg1.png) repeat-x top,
+    linear-gradient(to bottom, #8cb2df, #4e729a) !important;
+}
+
+.right_link {
+    color       : #ffffff !important;
+    font-weight : 300 !important;
+}
+
+.gifts_list_module a span.fl_l {
+    color : #ffffff !important;
+}

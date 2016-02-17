@@ -1,0 +1,117 @@
+.pro_actions {
+    font-size  : 10px;
+    display    : block;
+    cursor     : auto;
+    height     : 83px;
+    width      : 203px;
+    overflow   : hidden;
+    margin     : 7px 0 7px;
+    background : center url(../require/png/logo/logo23.gif) no-repeat;
+}
+
+.pro_action {
+    float         : left;
+    width         : 40px;
+    height        : 22px;
+    line-height   : 22px;
+
+    border-radius : 2px;
+    cursor        : pointer;
+
+    margin        : 2px 2px 2px 1px;
+    padding       : 0 2px 0 22px;
+
+    box-shadow    : 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+    border-bottom : 1px solid #1e1e1e;
+
+    color         : #fff;
+    text-shadow   : 0 1px 1px #1e1e1e;
+}
+
+.pro_action:hover,
+.pro_nowrite {
+    color           : #000;
+    box-shadow      : 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+    text-shadow     : 0 1px 1px #aaa;
+    text-decoration : underline;
+}
+
+.pro_action:active {
+    box-shadow : none;
+}
+
+/* ================================================== */
+
+.pro_check {
+    cursor     : help;
+    background : 4px 4px url(../require/origin/vk/png/marker/pro/check.png) no-repeat, linear-gradient(to bottom, #8cb2df, #3b5877);
+}
+
+.pro_check:after {
+    content : 'Check';
+}
+
+.pro_home {
+    background : 4px 5px url(../require/origin/vk/png/marker/pro/home.png) no-repeat, linear-gradient(to bottom, #8cb2df, #3b5877);
+}
+
+.pro_home:after {
+    content : 'Page';
+}
+
+.pro_friend {
+    background : 4px 4px url(../require/origin/vk/png/marker/pro/friends.png) no-repeat, linear-gradient(to bottom, #8cb2df, #3b5877);
+}
+
+.pro_friend:after {
+    content : 'Friends';
+}
+
+/* ================================================== */
+
+.pro_write {
+    background : 4px 6px url(../require/origin/vk/png/marker/pro/write.png) no-repeat, linear-gradient(to bottom, #8cb2df, #3b5877);
+}
+
+.pro_write:after {
+    content : 'Write';
+}
+
+.pro_trywrite {
+    background : 4px 6px url(../require/origin/vk/png/marker/pro/trywrite.png) no-repeat, linear-gradient(to bottom, #8cb2df, #3b5877);
+}
+
+.pro_trywrite:after {
+    content : 'Write';
+}
+
+.pro_closed {
+    color          : #000;
+    text-shadow    : 0 1px 1px #fff;
+
+    pointer-events : none;
+    background     : 3px 3px url(../require/origin/vk/png/marker/pro/closed.png) no-repeat, linear-gradient(to bottom, #98c0f1, #4a6f97);
+}
+
+.pro_closed:after {
+    content : 'Closed';
+}
+
+/* ================================================== */
+
+.pro_gift {
+    background : 4px 6px url(../require/origin/vk/png/marker/pro/gift.png) no-repeat, linear-gradient(to bottom, #8cb2df, #3b5877);
+}
+
+.pro_gift:after {
+    content : 'Gift';
+}
+
+.pro_trygift {
+    background : 4px 6px url(../require/origin/vk/png/marker/pro/trygift.png) no-repeat, linear-gradient(to bottom, #8cb2df, #3b5877);
+}
+
+.pro_trygift:after {
+    content : 'Gift';
+}
+

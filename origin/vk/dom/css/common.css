@@ -1,0 +1,155 @@
+@import url(https://fonts.googleapis.com/css?family=Comfortaa:400,300,700&subset=latin,cyrillic-ext,greek,latin-ext,cyrillic);
+
+html, body, button, input {
+    font-size   : 11px;
+    font-family : 'Comfortaa', tahoma, arial, verdana, sans-serif !important;
+}
+
+::selection {
+    background : transparent;
+}
+
+.shown {
+    display : block !important;
+}
+
+.invisible {
+    visibility : hidden !important;
+}
+
+.bg1 {
+    color      : #dcdcdc;
+    background : #1e1e1e url(../require/png/bg/bg1.png) repeat;
+}
+
+.bg2 {
+    color      : #dcdcdc;
+    background : #1e1e1e url(../require/png/bg/bg2.png) repeat;
+}
+
+/* ===================== CSS =======================  */
+
+.scroll_fix {
+    clear : both !important;
+    float : left !important;
+    width : auto !important;
+}
+
+#page_layout {
+    width : auto !important;
+}
+
+#page_body,
+#footer_wrap {
+    padding : 0 !important;
+    clear   : both !important;
+    float   : left !important;
+}
+
+#page_avatar {
+    overflow : inherit !important;
+}
+
+#profile_photo_link img,
+.profile_photo_img {
+    width         : 200px !important;
+    border-radius : 3px !important;
+}
+
+#footer_wrap {
+    width : 100% !important;
+}
+
+#versions {
+    padding : 7px 0 !important;
+}
+
+#stl_left, #stl_side,
+#side_bar, #left_ads,
+#l_ads, #l_ap, #bottom_nav,
+#owner_photo_bubble_wrap,
+#chat_onl_wrap, #feedly-mini {
+    display : none !important;
+}
+
+.fave_user_div_up > div,
+.photo_row_up div.cont {
+    top      : auto !important;
+    left     : auto !important;
+    position : static !important;
+}
+
+.friends_bigph, .search_bigph, .fans_fanph,
+.fave_uph, .search_sub, .search_verified {
+    display : none !important;
+}
+
+/* ================== Headers ======================  */
+
+#page_header {
+    width    : 100% !important;
+    z-index  : 999 !important;
+    position : fixed !important;
+}
+
+#header_wrap2 {
+    height : 40px !important;
+}
+
+#ts_wrap, #ts_cont_wrap {
+    left : 5px !important;
+}
+
+td.top_home_link_td {
+    display : none !important;
+}
+
+/* =================== Decor =======================  */
+
+#page_header .back,
+#page_header .left,
+#page_header .right {
+    color      : #fdca00 !important;
+    background : url(../require/png/bg/bg1.png) repeat-x top,
+    linear-gradient(to bottom, #8cb2df, #4e729a) !important;
+}
+
+#page_header .important {
+    color            : #fdca00 !important;
+    background-color : transparent !important;
+}
+
+#page_header .content {
+    margin-left : 32px !important;
+}
+
+#ts_input_wrap {
+    margin-top : -12px !important;
+}
+
+.top_nav_link {
+    text-shadow : 0 2px 3px #333 !important;
+    font-family : 'Comfortaa', tahoma, arial, verdana, sans-serif !important;
+    font-size   : 10pt !important;
+    font-weight : 300 !important;
+}
+
+/* ================= Dialogs =======================  */
+
+.im_msg_text {
+    font-size   : inherit !important;
+    font-family : inherit !important;
+}
+
+.im_gift_msg .im_log_body,
+.im_gift_msg .im_log_author,
+.im_gift_msg .im_log_date {
+    background : inherit !important;
+}
+
+.im_new_msg .im_log_author,
+.im_new_msg .im_log_body,
+.im_new_msg .im_log_date {
+    background : #f4ebd6 !important;
+}
+

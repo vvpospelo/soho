@@ -1,0 +1,53 @@
+/* === Gallery Selector ============================= */
+/* browser moves right to left, it starts by checking all the elements that match the key (last selector) */
+/* https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS */
+
+/* 1. Don’t qualify class rules with tag names */
+
+/* 2. Selector Efficiency */
+/* id (#myid) */
+/* class (.myclass) */
+/* tag (div, h1, p) */
+/* adjacent sibling (h1 + p) */
+/* child (ul > li) */
+/* descendent (li a) */
+/* universal (*) */
+/* attribute (a[rel="external"]) */
+/* pseudo-class and pseudo element (a:hover, li:first) */
+
+/* The descendant selector is the most expensive selector in CSS */
+/*   BAD
+   treehead treerow treecell {…}
+     BETTER, BUT STILL BAD (see next guideline)
+   treehead > treerow > treecell {…}
+*/
+
+.gallery_point {
+    display : none !important;
+}
+
+/* === Albums Selector ============================== */
+
+.preview {
+    display : none;
+}
+
+.all > .preview {
+    display : block;
+}
+
+.album0 > .album0, .album1 > .album1, .album2 > .album2, .album3 > .album3, .album4 > .album4,
+.album5 > .album5, .album6 > .album6, .album7 > .album7, .album8 > .album8, .album9 > .album9,
+.album10 > .album10, .album11 > .album11, .album12 > .album12, .album13 > .album13, .album14 > .album14,
+.album15 > .album15, .album16 > .album16, .album17 > .album17, .album18 > .album18, .album19 > .album19,
+.album20 > .album20, .album21 > .album21, .album22 > .album22, .album23 > .album23, .album24 > .album24,
+.album25 > .album25, .album26 > .album26, .album27 > .album27, .album28 > .album28, .album29 > .album29,
+.album30 > .album30, .album31 > .album31, .album32 > .album32, .album33 > .album33, .album34 > .album34,
+.album35 > .album35, .album36 > .album36, .album37 > .album37, .album38 > .album38, .album39 > .album39,
+.album40 > .album40, .album41 > .album41, .album42 > .album42, .album43 > .album43, .album44 > .album44,
+.album45 > .album45, .album46 > .album46, .album47 > .album47, .album48 > .album48, .album49 > .album49,
+.album50 > .album50, .album51 > .album51, .album52 > .album52, .album53 > .album53, .album54 > .album54,
+.album55 > .album55, .album56 > .album56, .album57 > .album57, .album58 > .album58, .album59 > .album59,
+.album60 > .album60, .album61 > .album61, .album62 > .album62, .album63 > .album63, .album64 > .album64 {
+    display : block;
+}

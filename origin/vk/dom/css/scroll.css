@@ -1,0 +1,38 @@
+::-webkit-scrollbar {
+    width         : 5px;
+    height        : 5px;
+    background    : #3c5b79;
+    border-top    : 2px solid #1e1e1e;
+    border-bottom : 2px solid #1e1e1e;
+}
+
+::-webkit-scrollbar-button {
+    height : 0;
+}
+
+::-webkit-scrollbar-thumb {
+    border-top    : 2px solid #1e1e1e;
+    border-bottom : 2px solid #1e1e1e;
+    background    : #79a3cd;
+}
+
+::-webkit-scrollbar-track, ::-webkit-scrollbar-button {
+}
+
+::-webkit-scrollbar-corner, ::-webkit-resizer {
+}
+
+body::-webkit-scrollbar, ::-webkit-scrollbar:horizontal {
+    display : none;
+    width   : 0;
+    height  : 0;
+}
+
+.scrollbar-measure {
+    width    : 100px;
+    height   : 100px;
+    overflow : scroll;
+    position : absolute;
+    top      : -9999px;
+}
+

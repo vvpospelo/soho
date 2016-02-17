@@ -1,0 +1,81 @@
+{
+  "manifest_version": 2,
+  "name": "SOHO Client",
+  "version": "1.01.02",
+  "offline_enabled": true,
+  "description": "SOHO.net",
+  "background": {
+    "scripts": [
+      "require/lodash.min.js",
+      "require/jquery.min.js",
+      "require/xregexp.min.js",
+      "require/lz-string.min.js",
+      "require/FileSaver.min.js",
+      "mixin/object.js",
+      "mixin/lodash.js",
+      "mixin/visual.js",
+      "mixin/debug.js",
+      "mixin/trial.js",
+      "api/api.js",
+      "api/init.js",
+      "api/dom/dom.js",
+      "api/dom/event.js",
+      "api/dom/html/code.js",
+      "api/dom/html/html.js",
+      "api/dom/html/query/XHR.js",
+      "api/dom/html/query/lQuery.js",
+      "api/dom/html/query/sQuery.js",
+      "loader/api/stacker.js",
+      "api/storage/files.js",
+      "api/storage/storage.js",
+      "bg/bg.archive.js",
+      "origin/vk/loaders/api/parser/lQuery.js",
+      "bg/origin/vk/archives/bg.booked.js",
+      "bg/origin/vk/archives/bg.dialogs.js",
+      "bg/origin/vk/archives/bg.friends.js",
+      "bg/origin/vk/archives/bg.recents.js",
+      "bg/origin/vk/archives/bg.viewed.js",
+      "bg/inject/bg.style.js",
+      "bg/inject/bg.script.js",
+      "bg/bg.init.js",
+      "bg/bg.tabs.js",
+      "bg/bg.runtime.js",
+      "bg/controls/bg.badge.js",
+      "bg/controls/bg.notice.js",
+      "bg/bg.server.js",
+      "bg/bg.services.js"
+    ]
+  },
+  "icons": {
+    "16": "require/png/logo/vk16.png",
+    "32": "require/png/logo/vk32.png",
+    "48": "require/png/logo/vk48.png",
+    "128": "require/png/logo/vk128.png"
+  },
+  "browser_action": {
+    "default_title": "SOHO Client",
+    "default_icon": "require/png/logo/vk128.png"
+  },
+  "web_accessible_resources": [
+    "*"
+  ],
+  "permissions": [
+    "tabs",
+    "file:///*",
+    "*://vk.com/*",
+    "*://*.vk.com/*",
+    "*://vkontakte.ru/*",
+    "*://*.vkontakte.ru/*",
+    "unlimitedStorage",
+    "storage"
+  ],
+  "externally_connectable": {
+    "matches": [
+      "*://*.vk.com/*",
+      "*://*.vkontakte.ru/*",
+      "*://vk.com/*",
+      "*://vkontakte.ru/*"
+    ]
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval' 'sha256-yMe7rg1rtOtqI8zbSQ0vakhSHAPVXIlPVXrBtjHQZdI='; object-src 'self'"
+}

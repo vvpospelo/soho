@@ -1,0 +1,162 @@
+.user_block .labeled,
+.user_block .lists,
+.people_row .labeled {
+    clear   : left !important;
+    width   : auto !important;
+    padding : 0 0 5px 0 !important;
+    margin  : 0 !important;
+}
+
+.user_block .labeled a,
+.people_row .labeled a {
+    text-decoration : none !important;
+}
+
+.user_block .labeled:empty,
+.people_row .labeled:empty {
+    padding : 0 !important;
+}
+
+/* --- labeled fave ------------------------------------------- */
+
+.labeled > .common_booked {
+    width   : 100px;
+    height  : 100px;
+    margin  : 1px 2px 5px 3px;
+    display : none;
+    float   : left;
+}
+
+.labeled > .common_booked img {
+    border-radius : 5px;
+}
+
+/* --- Labeled common friends --------------------------------- */
+
+.labeled > .common_friend {
+    margin : 1px 2px;
+    float  : left;
+}
+
+.labeled > .common_friend img {
+    width         : 66px;
+    height        : 66px;
+    border-radius : 4px;
+}
+
+/* --- Labeled recents ---------------------------------------- */
+
+.labeled > .common_recent {
+    width   : 50px;
+    height  : 50px;
+    margin  : 1px;
+    display : block;
+    float   : left;
+}
+
+.labeled > .common_recent img {
+    border-radius : 3px;
+}
+
+/* --- marked ------------------------------------------------- */
+
+.labeled > .mark_passive,
+.labeled > .mark_hidden,
+.labeled > .mark_ignored {
+    display : none;
+}
+
+.labeled > .common_booked.mark_booked {
+    display : block;
+}
+
+.labeled > .mark_viewed {
+    background-position : 3% 97%;
+    background-size     : 20% 20%;
+    background-repeat   : no-repeat;
+    background-image    : url(../require/origin/vk/png/profile/viewed.png);
+    transition          : all .18s ease;
+}
+
+.labeled > .mark_viewed img {
+    opacity       : 0.66 !important;
+    border-radius : 50% !important;
+    transition    : all .18s ease;
+}
+
+/* ------------------------------------------------------------ */
+
+#content .online {
+    color       : rgba(0, 105, 0, 0.90) !important;
+    text-shadow : 0 1px 0 rgba(0, 105, 0, 0.20) !important;
+}
+
+#content .nice,
+#content .nice a {
+    color       : rgba(0, 105, 0, 0.90) !important;
+    text-shadow : 0 1px 0 rgba(0, 105, 0, 0.20) !important;
+}
+
+#content .warn,
+#content .warn a {
+    color       : rgba(210, 105, 30, 0.90) !important;
+    text-shadow : 0 1px 0 rgba(210, 105, 30, 0.20) !important;
+}
+
+#content .tabu,
+#content .tabu a {
+    color       : rgba(194, 34, 34, 0.90) !important;
+    text-shadow : 0 1px 0 rgba(194, 34, 34, 0.20) !important;
+}
+
+/* ------------------------------------------------------------ */
+
+#content .name_label {
+    font-weight : bold !important;
+}
+
+/* ------------------------------------------------------------ */
+
+body:after {
+    display : none;
+    content : url(../require/origin/vk/png/profile/mens.png);
+}
+
+#content .sexratio_label {
+    padding-left : 22px !important;
+    line-height  : 18px !important;
+    background   : url(../require/origin/vk/png/profile/mens.png) no-repeat !important;
+}
+
+/* ------------------------------------------------------------ */
+
+#content .univers_label {
+    font-size   : smaller;
+    white-space : nowrap;
+    display     : none;
+}
+
+/* ------------------------------------------------------------ */
+
+#content .location_label .cities {
+    font-weight : 600 !important;
+    font-size   : smaller !important;
+    color       : rgba(40, 67, 98, 0.90) !important;
+    text-shadow : 0 1px 0 rgba(40, 67, 98, 0.20) !important;
+}
+
+/* ------------------------------------------------------------ */
+
+#content .text_label {
+    padding-top   : 5px !important;
+    margin-bottom : 9px !important;
+    font-style    : italic !important;
+    color         : #4a4a4a !important;
+}
+
+/* ------------------------------------------------------------ */
+
+#content .age_label {
+    text-align : right !important;
+}
+

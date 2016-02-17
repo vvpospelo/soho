@@ -1,0 +1,42 @@
+@font-face {
+    font-family : TeXGyreCursor;
+    src         : url(../../require/fonts/TeXGyreCursor/texgyrecursor-regular.otf) format('opentype');
+}
+
+@font-face {
+    font-family : NotCourierSans;
+    src         : url(../../require/fonts/NotCourierSans/NotCourierSans.otf) format('opentype');
+}
+
+@font-face {
+    font-family : DroidSansMono;
+    src         : url(../../require/fonts/DroidSansMono/DroidSansMono.ttf) format('opentype');
+}
+
+@keyframes fadein {
+    0% {
+        opacity : 0;
+    }
+    100% {
+        opacity : 1;
+    }
+}
+
+@keyframes fadein66 {
+    0% {
+        opacity : 0;
+    }
+    100% {
+        opacity : 0.66;
+    }
+}
+
+@keyframes fadeout {
+    0% {
+        opacity : 1;
+    }
+    100% {
+        opacity : 0;
+    }
+}
+

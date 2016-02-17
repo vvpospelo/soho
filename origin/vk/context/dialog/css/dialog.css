@@ -1,0 +1,48 @@
+.emoji_tt_wrap {
+    margin-top : -478px !important;
+    width      : 335px !important;
+    height     : 370px !important;
+}
+
+.emoji_list {
+    height : 350px !important;
+    width  : 325px !important;
+}
+
+/* --- write -------------------------------------------------------------------------------------------------------- */
+
+#im_controls_wrap {
+    float : left !important;
+}
+
+#custom_phrases {
+    display    : none;
+    padding    : 16px 24px;
+    overflow-x : hidden;
+}
+
+a.custom_phrase {
+    display       : inline-block;
+    max-width     : 548px;
+
+    white-space   : nowrap;
+    overflow      : hidden;
+    text-overflow : ellipsis;
+}
+
+.im_editable {
+    width      : 398px;
+    min-height : 96px;
+}
+
+#toggle_phrases {
+    padding : 0 9px;
+}
+
+/* --- dialog_search ------------------------------------------------------------------------------------------------ */
+
+.im_friend a {
+    display : block;
+}
+
+

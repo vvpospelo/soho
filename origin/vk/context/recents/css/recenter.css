@@ -1,0 +1,67 @@
+#im_sum {
+    float   : left;
+    padding : 2px 7px 0 0;
+}
+
+#im_content .divider {
+    display : none;
+}
+
+#recenter {
+    height : 18px;
+}
+
+.recenter {
+    float           : left;
+    width           : 72px;
+    height          : 16px;
+    display         : block;
+    color           : #bbcada;
+    background      : transparent;
+    text-decoration : none;
+    white-space     : nowrap;
+    border-radius   : 8px;
+    margin-left     : 3px;
+}
+
+.recenter label {
+    width         : 68px;
+    height        : 16px;
+    line-height   : 16px;
+    text-align    : center;
+    border-radius : 8px;
+    padding       : 0 2px;
+}
+
+.recenter input[type=checkbox]:checked + label {
+    left  : 16px;
+    width : 52px;
+}
+
+.just_online.recenter {
+    background : linear-gradient(to bottom, #147b1f, #1ee033);
+}
+
+.just_unread.recenter {
+    background : linear-gradient(to bottom, #79645b, #ffe7ba);
+}
+
+.just_passive.recenter {
+    background : linear-gradient(to bottom, #5a5a5a, #bbbbbb);
+}
+
+.just_hidden.recenter {
+    background : linear-gradient(to bottom, #9a1f18, #ff2d23);
+}
+
+.testing.recenter {
+    background : linear-gradient(to bottom, #147b1f, #1ee033);
+}
+
+.hide_expected.recenter {
+    background : linear-gradient(to bottom, #6e2f2f, #d15b5b);
+}
+
+.just_expected.recenter {
+    background : linear-gradient(to bottom, #9c4343, #ff7070);
+}

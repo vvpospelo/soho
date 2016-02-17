@@ -1,0 +1,130 @@
+#watcher {
+    top          : 0;
+    right        : 0;
+    width        : 100%;
+    height       : 20px;
+    z-index      : 99;
+    position     : absolute;
+    background   : transparent;
+    color        : #dcdcdc;
+    border-style : outset;
+    border-color : #dcdcdc;
+    border-width : 0 0 1px 0;
+}
+
+#left_watcher,
+#right_watcher {
+    width       : auto;
+    float       : left;
+    word-wrap   : normal;
+    white-space : nowrap;
+    padding     : 0 9px;
+}
+
+#right_watcher {
+    float : right;
+}
+
+/* === Labeled =====================================  */
+
+#watcher .labeled {
+    padding-left  : 17px;
+    max-width     : 144px;
+    height        : 20px;
+    line-height   : 20px;
+    display       : inline-block;
+
+    white-space   : nowrap;
+    overflow      : hidden;
+    text-overflow : ellipsis;
+
+    background    : 4px 6px url(../require/origin/vk/png/profile/sep.png) no-repeat;
+    font-weight   : 400 !important;
+    text-shadow   : none !important;
+}
+
+#watcher .labeled.sites_label {
+    padding-left : 7px;
+    max-width    : 288px;
+    white-space  : normal;
+    background   : none;
+}
+
+#watcher .labeled:empty,
+#watcher .labeled:first-child {
+    padding    : 0;
+    background : none;
+}
+
+#left_watcher .labeled:nth-child(2) {
+    padding-left : 5px;
+    background   : none;
+}
+
+/* === URLs ========================================  */
+
+.url {
+    padding-left  : 15px;
+    padding-right : 3px;
+    height        : 20px;
+    line-height   : 20px;
+    display       : inline-block;
+    white-space   : nowrap;
+    overflow      : hidden;
+    background    : 0 7px url(../require/origin/vk/png/profile/site.png) no-repeat;
+}
+
+#watcher .url {
+    background : 0 7px url(../require/origin/vk/png/profile/site79a3cd.png) no-repeat;
+}
+
+/* ================== Text =========================  */
+
+#watcher a {
+    color           : #bbcada;
+    text-decoration : none;
+}
+
+#watcher .online {
+    color : #1ee033;
+}
+
+#watcher .nice,
+#watcher .nice a {
+    color : #1ee033;
+}
+
+#watcher .warn,
+#watcher .warn a {
+    color : #fea44a;
+}
+
+#watcher .tabu,
+#watcher .tabu a {
+    color : #ff2d23;
+}
+
+/* ================== Birthday =====================  */
+
+#birthday {
+    right         : 0;
+    bottom        : 0;
+    z-index       : 99;
+    position      : fixed;
+    padding       : 2px 48px;
+    height        : 16px;
+    line-height   : 16px;
+    color         : #1e1e1e;
+    background    : #ececec;
+    opacity       : 0.75;
+    border-radius : 5px 0 0 0;
+}
+
+#birthday:hover {
+    opacity : 1;
+}
+
+#birthday:empty {
+    display : none;
+}
+

@@ -1,0 +1,51 @@
+.alert {
+    height    : 70%;
+    width     : 80%;
+    top       : 10%;
+    left      : 10%;
+    opacity   : 0.95;
+    position  : fixed;
+    z-index   : 999999;
+    animation : fadein 0.2s ease-in alternate;
+    font      : 10pt consolas;
+    color     : #ffffff;
+}
+
+.alert_button, .alert_title {
+    background    : url(../../require/png/bg/bg1.png) repeat-x top, linear-gradient(to bottom, #8cb2df, #4e729a);
+    font-family   : 'Comfortaa', tahoma, arial, verdana, sans-serif;
+    text-shadow   : 0 2px 3px #333;
+    text-align    : center;
+    font-size     : 10pt;
+    border-radius : 3px;
+}
+
+.alert_title {
+    height        : 24px;
+    line-height   : 24px;
+    margin-bottom : 1px;
+}
+
+.alert_modal {
+    border-radius    : 3px;
+    padding          : 3px;
+    height           : 100%;
+    overflow         : hidden;
+    color            : #dcdcdc;
+    background-color : #1e1e1e;
+}
+
+.alert_text {
+    margin     : -3px;
+    width      : 100%;
+    height     : 100%;
+    border     : none;
+    color      : #ffffff;
+    background : transparent;
+}
+
+.alert_button {
+    margin-top  : 1px;
+    margin-left : 3px;
+    float       : right;
+}

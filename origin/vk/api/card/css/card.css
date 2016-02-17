@@ -1,0 +1,65 @@
+/* ================ Widen Card =====================  */
+
+.profiled_info {
+    padding-right : 8px !important;
+    padding-left  : 12px !important;
+    width         : 218px !important;
+}
+
+.profiled_info .text_label {
+    border-color : #555;
+    border-style : solid;
+    border-width : 0 0 1px 0;
+}
+
+.loading .profiled_info .text_label {
+    border-image : url(../require/png/loaders/bar/loadinfo1.gif) 0 0 1 0;
+}
+
+.profile_photo {
+    float : left !important;
+    width : 200px !important;
+}
+
+/* ================ Decor Card =====================  */
+
+#results,
+#friends .main_panel {
+    padding : 0 6px !important;
+}
+
+#results .people_row,
+#friends .user_block {
+    padding-left : 6px !important;
+    margin       : 9px 0 !important;
+    border       : none !important;
+}
+
+#friends .user_block .actions {
+    display : none !important;
+}
+
+#results .people_row,
+#friends .user_block {
+    box-shadow : 0 1px 4px rgba(78, 114, 154, 0.80), 0 0 40px rgba(78, 114, 154, 0.10) inset;
+}
+
+#results .people_row.gray,
+#friends .user_block.gray {
+    box-shadow : 0 1px 4px rgba(173, 101, 95, 0.80), 0 0 40px rgba(173, 101, 95, 0.10) inset;
+}
+
+#results .people_row span,
+#friends .user_block span {
+    padding          : 0 !important;
+    margin           : 0 !important;
+    background-color : transparent !important;
+}
+
+#list_content {
+    padding-bottom : 1000px !important;
+}
+
+.request .info_no_actions {
+    width : 360px !important;
+}

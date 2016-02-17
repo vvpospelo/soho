@@ -1,0 +1,73 @@
+.pro_action.chkbox label {
+    width         : 40px;
+    height        : 22px;
+    line-height   : 22px;
+
+    border-radius : 2px;
+    padding       : 0 2px 0 22px;
+}
+
+.pro_action.chkbox input[type=checkbox]:checked + label {
+    left          : 21px;
+    width         : 39px;
+
+    text-align    : center;
+    border-radius : 0 2px 2px 0;
+    padding       : 0 2px;
+}
+
+/* ================================================== */
+
+.pro_booked.chkbox {
+    background : 4px 4px url(../require/origin/vk/png/marker/pro/booked.png) no-repeat, linear-gradient(to bottom, #1b2b37, #304961);
+}
+
+.pro_booked.chkbox input + label {
+    background : 4px 4px url(../require/origin/vk/png/marker/pro/book.png) no-repeat, linear-gradient(to bottom, #8cb2df, #3b5877);
+}
+
+.pro_booked.chkbox input:checked + label {
+    background : linear-gradient(to bottom, #8cb2df, #3b5877);
+}
+
+/* ================================================== */
+
+.pro_viewed.chkbox {
+    background : 4px 4px url(../require/origin/vk/png/marker/pro/viewed.png) no-repeat, linear-gradient(to bottom, #1b2b37, #304961);
+}
+
+.pro_viewed.chkbox input + label {
+    background : 4px 4px url(../require/origin/vk/png/marker/pro/view.png) no-repeat, linear-gradient(to bottom, #8cb2df, #3b5877);
+}
+
+.pro_viewed.chkbox input:checked + label {
+    background : linear-gradient(to bottom, #8cb2df, #3b5877);
+}
+
+/* ================================================== */
+
+.pro_ignored.chkbox {
+    background : 3px 4px url(../require/origin/vk/png/marker/pro/ignored.png) no-repeat, linear-gradient(to bottom, #1b2b37, #304961);
+}
+
+.pro_ignored.chkbox input + label {
+    background : 3px 4px url(../require/origin/vk/png/marker/pro/ignore.png) no-repeat, linear-gradient(to bottom, #8cb2df, #3b5877);
+}
+
+.pro_ignored.chkbox input:checked + label {
+    background : linear-gradient(to bottom, #8cb2df, #3b5877);
+}
+
+/* ================================================== */
+
+.pro_hidden.chkbox {
+    background : 4px 4px url(../require/origin/vk/png/marker/pro/hidden.png) no-repeat, linear-gradient(to bottom, #1b2b37, #304961);
+}
+
+.pro_hidden.chkbox input + label {
+    background : 4px 4px url(../require/origin/vk/png/marker/pro/hide.png) no-repeat, linear-gradient(to bottom, #8cb2df, #3b5877);
+}
+
+.pro_hidden.chkbox input:checked + label {
+    background : linear-gradient(to bottom, #8cb2df, #3b5877);
+}

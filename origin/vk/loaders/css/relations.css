@@ -1,0 +1,93 @@
+.relations {
+    height         : 0;
+    width          : auto;
+    opacity        : 0.75;
+    float          : right;
+    display        : block;
+    background     : transparent;
+    pointer-events : none;
+    position       : relative;
+    right          : 6px;
+    bottom         : 32px;
+}
+
+#page_avatar .relations {
+    bottom : 28px;
+}
+
+#watcher .relations {
+    position : inherit;
+}
+
+#mail .relations {
+    position : absolute;
+    top      : -5px;
+    right    : 64px;
+}
+
+/* ================================================== */
+
+.relation {
+    margin        : 2px;
+    border-radius : 50%;
+    float         : right;
+    height        : 32px;
+    width         : 32px;
+    background    : #1e1e1e no-repeat center;
+    box-shadow    : 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#watcher .relation {
+    margin              : 0 1px;
+    height              : 20px;
+    width               : 20px;
+    background-size     : 16px;
+    background-color    : transparent;
+    background-position : center;
+}
+
+.rel_friended {
+    background-position-y : 5px;
+    background-image      : url(../require/origin/vk/png/marker/rel/rfriended.png);
+}
+
+.rel_rejected {
+    background-position-y : 5px;
+    background-image      : url(../require/origin/vk/png/marker/rel/rrejected.png);
+}
+
+.rel_written {
+    background-image : url(../require/origin/vk/png/marker/rel/rwritten.png);
+}
+
+.rel_writable {
+    background-image : url(../require/origin/vk/png/marker/rel/rwritable.png);
+}
+
+.rel_closed {
+    background-position-y : 5px;
+    background-image      : url(../require/origin/vk/png/marker/rel/rclosed.png);
+}
+
+.rel_expected {
+    background-image : url(../require/origin/vk/png/marker/rel/rexpected.png);
+}
+
+.rel_gifted {
+    background-position-x : 7px;
+    background-image      : url(../require/origin/vk/png/marker/rel/rgifted.png);
+}
+
+.rel_booked {
+    background-position-y : 6px;
+    background-image      : url(../require/origin/vk/png/marker/rel/rbooked.png);
+}
+
+#watcher .rel_closed {
+    background-position-y : 2px;
+}
+
+#watcher .rel_written,
+#watcher .rel_writable {
+    background-position-y : 4px;
+}

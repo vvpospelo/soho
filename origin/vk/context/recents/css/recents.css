@@ -1,0 +1,139 @@
+#im_sound_controls, #im_nav_wrap, #im_switch_unr, #im_controls_wrap {
+    display : none !important;
+}
+
+/* ------------------------------------------------------------ */
+
+#im_dialogs, #im_content .summary_wrap {
+    background : #1e1e1e url(../require/png/bg/bg1.png) repeat top;
+}
+
+#im_dialogs {
+    padding    : 3px;
+    overflow-y : scroll;
+    overflow-x : hidden;
+    clear      : both;
+}
+
+#im_dialogs.test {
+    pointer-events : none;
+}
+
+#im_content {
+    padding : 0 !important;
+}
+
+#im_dialogs > .recent {
+    display : block;
+    float   : left;
+    margin  : 2px;
+    opacity : 0.66;
+    width   : 50px;
+    height  : 50px;
+    border  : 1px solid #555555;
+    color   : #555555;
+}
+
+#im_dialogs > .recent[style] {
+    animation : fadein66 0.2s ease-in alternate;
+}
+
+/* --- Online ------------------------------------------------- */
+
+#im_dialogs.just_online > .recent {
+    display : none !important;
+}
+
+#im_dialogs.just_online > .mark_online {
+    display : block !important;
+}
+
+/* --- unRead ------------------------------------------------- */
+
+#im_dialogs.just_unread > .recent {
+    display : none !important;
+}
+
+#im_dialogs.just_unread > .mark_unread {
+    display : block !important;
+}
+
+/* --- Expected ----------------------------------------------- */
+
+#im_dialogs.hide_expected > .mark_expected {
+    display : none !important;
+}
+
+#im_dialogs.just_expected > .recent {
+    display : none !important;
+}
+
+#im_dialogs.just_expected > .mark_expected {
+    display : block !important;
+}
+
+/* --- Passive ------------------------------------------------ */
+
+#im_dialogs > .mark_passive {
+    display : none !important;
+}
+
+#im_dialogs.just_passive > .recent {
+    display : none !important;
+}
+
+#im_dialogs.just_passive > .mark_passive {
+    display : block !important;
+}
+
+/* --- Hidden ------------------------------------------------- */
+
+#im_dialogs > .mark_hidden {
+    display : none !important;
+}
+
+#im_dialogs.just_hidden > .recent {
+    display : none !important;
+}
+
+#im_dialogs.just_hidden > .mark_hidden {
+    display : block !important;
+}
+
+/* --- Selected ----------------------------------------------- */
+
+#im_dialogs > .recent.selected_card {
+    opacity       : 1.0 !important;
+    border-radius : 50% !important;
+    transition    : all .12s ease;
+}
+
+/* ------------------------------------------------------------ */
+
+#im_dialogs > .mark_write {
+    border-color : #eed8ae !important;
+}
+
+#im_dialogs > .mark_unread {
+    border-color : #ffe7ba !important;
+}
+
+#im_dialogs > .mark_online {
+    opacity      : 1.00 !important;
+    border-color : #1ee033 !important;
+}
+
+#im_dialogs > .mark_expected {
+    border-color : #994242 !important;
+}
+
+/* ------------------------------------------------------------ */
+
+#im_content .summary_wrap {
+    padding : 0 10px 0;
+    color   : #bbcada;
+}
+
+#im_content .summary_wrap .summary {
+    padding : 5px 0 3px;
+}

@@ -1,0 +1,35 @@
+.chkbox input[type=checkbox] {
+    visibility : hidden;
+}
+
+.chkbox {
+    position : relative;
+}
+
+.chkbox label {
+    display       : block;
+    cursor        : pointer;
+    position      : absolute;
+    top           : 0px;
+    left          : 0px;
+    z-index       : 1;
+
+    white-space   : nowrap;
+    overflow      : hidden;
+    text-overflow : ellipsis;
+
+    background    : linear-gradient(to bottom, #8cb2df, #3b5877);
+    transition    : left .12s ease, width .12s ease, margin .12s ease, padding .12s ease;
+}
+
+.chkbox.frozen label {
+    pointer-events : none;
+    background     : linear-gradient(to bottom, #8cb2df, #3b5877);
+}
+
+.chkbox:hover label {
+    color       : #000;
+    box-shadow  : 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+    text-shadow : 0 1px 1px #aaa;
+}
+
