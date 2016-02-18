@@ -17,7 +17,6 @@
       "mixin/debug.js",
       "mixin/trial.js",
       "api/api.js",
-      "api/init.js",
       "api/dom/dom.js",
       "api/dom/event.js",
       "api/dom/html/code.js",

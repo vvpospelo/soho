@@ -2,6 +2,10 @@ function Parser() {
 
     var self = this;
 
+    function isExpected(text) {
+        return INI.phrasesRegExp && INI.phrasesRegExp.test(text);
+    }
+
     this.parseBooked = function(data) {
         return _.transform(XHR.sQuery(HTML.extractNode(data, 'body')).first('#users').first('#users_content').children(), function(booked, fave) {
             var id  = Number(API.tryVKID(/-?\d+$/, fave.id())),
@@ -104,7 +108,7 @@ function Parser() {
                     var media = container.first('.page_post_queue_narrow');
                     if ( !media.isBlank() ) {
                         var author    = content.first('.author').text(),
-                            albumName = 'Фотографии на стене ' + author,
+                            albumName = 'пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ ' + author,
                             desc      = content.child(2).innerText(),
                             lastDesc  = container.last('.media_desc'),
                             postText  = container.child('.wall_post_text');
@@ -164,7 +168,7 @@ function Parser() {
             info.name = name.first('a').text().normalize();
             info.readed = !row.is('.dialogs_new_msg') && !msg.is('.dialogs_new_msg');
             if ( info.own = !msg.child('.dialogs_inline_author').isBlank() ) {
-                info.expected = INI.isExpected(msg.innerText());
+                info.expected = isExpected(msg.innerText());
             }
             info.unread = !info.readed && !info.own;
             info.write = info.readed && info.own;
@@ -204,7 +208,7 @@ function Parser() {
             rows.filter('.im_add_row').each(function(i, tr) {
                 $(tr).nextAll().not('.im_add_row').first().after(tr);
             });
-            return $('<div id="mail"></div>').addClass(INI.isExpected(outText) && 'expected' || gifted.length && 'gifted' || '').append(mail);
+            return $('<div id="mail"></div>').addClass(isExpected(outText) && 'expected' || gifted.length && 'gifted' || '').append(mail);
         }
     }.try(null);
 

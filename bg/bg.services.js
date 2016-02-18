@@ -49,7 +49,7 @@ let services = new function() {
 
         keydown : function(msg, tab, post) {
             post(tab.id, {
-                uncover : INI.keyUncover(msg.keydown)
+                uncover : DOM.keyUncover(msg.keydown)
             });
         },
 
@@ -92,7 +92,7 @@ let services = new function() {
             runtime.tabs.opener(tab, msg, post);
             post(tab.id, {
                 ready   : true,
-                uncover : INI.tryUncover(msg.openerTabId)
+                uncover : DOM.tryUncover(msg.openerTabId)
             });
         },
 

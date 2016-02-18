@@ -1,6 +1,18 @@
 function Marker() {
     Marker.superclass.constructor.apply(this, arguments);
 
+    INI.timeViewed = 5 * TIME.day;
+    INI.ignoredFlag = -1;
+    INI.hiddenFlag = -2;
+
+    TIME.ifViewed = function(time) {
+        return ((time = time || 0) < 0 && _.now() || time ) - _.now() + INI.timeViewed;
+    }.try(false);
+
+    TIME.isViewed = function(time) {
+        return TIME.ifViewed(time) >= 0;
+    }.try(false);
+
     var self   = this,
         viewed = {},
         booked = {};

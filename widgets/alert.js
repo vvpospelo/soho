@@ -1,6 +1,6 @@
 DOM.alert = function(data) {
     var alerts = DOM.alerts.find('.alert');
-    if ( alerts.length >= INI.max_alerts ) {
+    if ( alerts.length >= 24 ) {
         alerts.first().remove();
     }
     var alert = $('<div class="alert"></div>').append('<div class="alert_title">Alert</div>').appendTo(DOM.alerts),

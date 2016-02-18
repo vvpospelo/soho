@@ -22,11 +22,24 @@ DOM.joined = $.when(
     ]),
 
     LNK.apply([
+        'api/dom/dom.js',
+        'api/dom/event.js',
+        'api/dom/position.js',
+        'api/dom/sibling.js'
+    ]),
+
+    LNK.apply([
         'api/html/code.js',
         'api/html/html.js',
         'api/html/query/lQuery.js',
         'api/html/query/sQuery.js',
         'api/html/query/XHR.js'
+    ]),
+
+    LNK.apply([
+        'api/unicode/unicode.js',
+        'api/unicode/unicode.dia.js',
+        'api/unicode/unicode.greek.js'
     ]),
 
     LNK.apply([
@@ -37,12 +50,6 @@ DOM.joined = $.when(
         './api/link/vk.api.role.js'
     ]),
 
-    LNK.apply([
-        './api/dom/vk.api.dom.js',
-        './api/dom/vk.api.events.js',
-        './api/dom/vk.api.position.js',
-        './api/dom/vk.api.sibling.js'
-    ]),
 
     LNK.apply([
         './api/card/vk.card.js',
@@ -52,12 +59,6 @@ DOM.joined = $.when(
     ]),
 
 
-    LNK.apply([
-        './const/vk.const.js',
-        './const/vk.word.js',
-        './const/vk.word.dia.js',
-        './const/vk.word.greek.js'
-    ]),
 
     (function tryPilot(trial) {
         return (trial = $.Deferred()) && LNK.tryPilot([
@@ -118,6 +119,7 @@ DOM.joined = $.when(
     ], true),
 
     LNK.apply([
+        './const/vk.const.js',
         './vk.init.js'
     ]),
 
